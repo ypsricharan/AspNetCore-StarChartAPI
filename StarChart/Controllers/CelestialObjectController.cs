@@ -106,7 +106,7 @@ namespace StarChart.Controllers
         {
 
             var existingObjects = _context.CelestialObjects.Where(e => e.Id == id || e.OrbitedObjectId == id);
-            if (existingObjects == null)
+            if (!existingObjects.Any())
             {
                 return NotFound();
             }
