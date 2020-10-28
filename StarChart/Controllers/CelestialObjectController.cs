@@ -47,7 +47,7 @@ namespace StarChart.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll(string name)
+        public IActionResult GetAll()
         {
 
             var celestialObjects = _context.CelestialObjects.ToList();
