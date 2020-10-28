@@ -102,7 +102,7 @@ namespace StarChart.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult RenameObject(int id)
+        public IActionResult Delete(int id)
         {
 
             var existingObjects = _context.CelestialObjects.Where(e => e.Id == id || e.OrbitedObjectId == id);
